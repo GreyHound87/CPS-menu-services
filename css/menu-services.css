@@ -35,21 +35,20 @@ body {
 .submit-btn:hover,
 .status-btn:hover {
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5)) saturate(1.8);
-  transform: scale(1.05);
 }
+
 
 .burger-btn__img,
 .search-btn__img,
 .call-btn__img,
 .chat-btn__img,
-.profile-btn__img,
-.submit-btn__img,
-.status-btn__img {
+.profile-btn__img {
   box-sizing: border-box;
   display: block;
   margin: auto;
   transition: all 0.3s ease;
 }
+
 
 .link-btn, .lang-link{
   box-sizing: border-box;
@@ -86,9 +85,10 @@ box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.more-btn {
+.more-btn{
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 141px;
   height: 24px;
@@ -102,8 +102,25 @@ box-sizing: border-box;
   cursor: pointer;
   font-weight: 500;
   padding-right: 9px;
-  padding-left: 9px;
+  position: relative;
 }
+
+.more-btn::before {
+  content: '';
+  display: block;
+  width: 24px; 
+  height: 24px; 
+  background-image: url('../icons/more-btn.svg'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute; 
+  right: 125px; 
+  top: 50%; 
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+
 
 .menu {
   box-sizing: border-box;
@@ -325,13 +342,18 @@ box-sizing: border-box;
   left: -41px;
 }
 
-.services__submit-btn:hover .submit-btn__img {
-  transform: rotate(720deg);
+.services__submit-btn {
+  background-image: url( '../icons/service.svg' );
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.services__status-btn:hover .status-btn__img {
-  transform: scale(1.4) rotate(10deg);
+.services__status-btn {
+  background-image: url( '../icons/status.svg' );
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .services__btns-wrapper--hidden {
   display: none;
@@ -531,6 +553,10 @@ box-sizing: border-box;
 
   .services__more-btn {
     padding-left: 9px;
+  }  
+
+  .more-btn::before {
+    right: 117px;
   }
 
   .services__image {

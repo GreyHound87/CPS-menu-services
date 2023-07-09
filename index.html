@@ -68,9 +68,18 @@
             <a id="mailtoLink" class="mailto menu__mailto" href="mailto:mail@cps.com">mail@cps.com</a>
             <a id="calltoLink" class="callto menu__callto" href="tel:88008908900">8 800 890 8900</a>
             <div id="langWrapper" class="lang-block menu__lang-block">
-                <a id="langLink1" href="#" class="lang-link menu__lang-link menu__lang-link--current">RU</a>
-                <a id="langLink2" href="#" class="lang-link menu__lang-link">EN</a>
-                <a id="langLink3" href="#" class="lang-link menu__lang-link">CH</a>
+                <input id="langRadio1" type="radio" name="langRadio" value="RU" class="lang-radio" checked>
+                <label Id="langLink1" for="langRadio1" class="lang-radio-label">
+                    RU
+                </label>                
+                <input id="langRadio2" type="radio" name="langRadio" value="EN" class="lang-radio">
+                <label Id="langLink2" for="langRadio2" class="lang-radio-label">
+                    EN
+                </label>                
+                <input id="langRadio3" type="radio" name="langRadio" value="CH" class="lang-radio">
+                <label Id="langLink3" for="langRadio3" class="lang-radio-label">
+                    CH
+                </label>
             </div>
         </header>
         <div id="upenderException" class="upender__exception">
@@ -84,11 +93,9 @@
                         <div id="servicesBtnWrapper" class="btns-wrapper services__btns-wrapper">
                             <label class="submit-txt services__submit-txt" for="submit">Оставить заявку</label>
                             <button id="submit" class="submit-btn services__submit-btn">
-                                <img class="submit-btn__img" src="./icons/service.svg" alt="Оставить заявку">
                             </button>
                             <label class="status-txt services__status-txt" for="status">Статус ремонта</label>
                             <button id="status" class="status-btn services__status-btn">
-                                <img class="status-btn__img" src="./icons/status.svg" alt="Статус ремонта">
                             </button>
                         </div>
                     </div>
@@ -128,7 +135,6 @@
                                 </span>
                             </p>
                             <button id="servicesMoreBtn" class="more-btn services__more-btn">
-                                <img id="servicesMoreBtnImg" class="more-btn__img" src="./icons/more-btn.svg" alt="Читать далее-скрыть">
                                 <Span id="servicesMoreBtnTxt">Читать далее</Span>
                             </button>
                        </article>
